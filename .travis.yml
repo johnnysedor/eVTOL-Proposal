@@ -1,0 +1,19 @@
+language: generic
+sudo: required
+dist: bionic
+
+env:
+
+
+before_install:
+- sudo apt-get update
+- sudo apt-get -y install texlive-latex-base texlive-latex-extra 
+
+install: echo "Nothing occurs at installation, only script"
+
+
+script:
+- pdfllatex -pdf main.tex
+
+notifications:
+  email: false
